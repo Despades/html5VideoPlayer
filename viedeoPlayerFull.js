@@ -132,7 +132,6 @@ const videoPlayer = (function(){
         videoChangeResolution(e){
             const videoSource = this.inteface.buttons.resulutionSelect.value;
             const currentTime = Math.floor(this.videoPlayer.currentTime);
-            //const durationTime = this.videoPlayer.duration;
 
             this.videoPlayer.src = videoSource;
             this.videoPlayer.load();
