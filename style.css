@@ -1,0 +1,115 @@
+.wrapper{
+    width: 640px;
+    height: 480px;
+    margin: 0 auto;
+}
+.video-container{
+    background:#000;
+    width:100%;
+    color:#fff;
+}
+    
+.video-player{    
+    width:100%;
+    margin:0;
+}
+
+.video-hud{    
+    margin:0;
+    padding:1px;
+    height: 39px;
+    overflow: hidden;
+}
+
+.video-hud__element{    
+    cursor:pointer;
+    display:inline-block;
+    vertical-align:middle;
+    height:30px;
+    line-height: 30px;
+}
+
+
+.video-hud__progress-bar{
+    width: 160px;
+}
+
+.video-hud__speed, .video-hud__resolution{
+    outline: none;
+    border-radius: 5px;
+    border: 2px solid #000;
+}
+
+.video-hud__speed:focus{
+    border-color: #0043ff;
+}
+
+.video-hud__action{    
+    width:30px;
+    transition-property: transform;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+    transition-delay: 0.2s;   
+}
+
+.video-hud__action:hover{
+    transform:scale(1.1)
+}
+
+.video-hud__action_play{
+    background: url(./images/2401820-200.png) center no-repeat;
+    background-size: 80%;   
+    background-color:#0043ff;
+    border-radius:0 100px 100px 0;
+}
+
+.video-hud__action_pause{
+    background: url(./images/media-controls-pause-icon.png) center no-repeat;
+    background-size: 80%;
+    background-color:#c00;    
+}
+    
+.video-hud__mute{    
+    width:30px;
+    border-radius:100px 100px 100px 100px;    
+}
+    
+.video-hud__mute_true{    
+    background:#c00;
+}
+    
+.video-hud__mute_false{    
+    background:#ccc;
+}
+    
+.video-hud__download{    
+    background:#ccc;
+    width:30px;
+    border-radius:0 0 100px 100px;
+}
+
+.video-hud__fullscreen{
+    text-align: center;
+    transition-property: transform;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+    transition-delay: 0.2s;
+}
+
+.video-hud__fullscreen:hover{
+    transform: scale(1.3);
+}
+
+.video-hud__download{
+    background: #ccc url(./images/download_icon.png) center no-repeat;
+    background-size: 80%;
+    border-radius: 2px;   
+    transition-property: background-size;
+    transition-duration: 0.4s;
+    transition-timing-function: ease-out;
+    transition-delay: 0.3s;
+}
+
+.video-hud__download:hover{
+    background-size: 83%;
+}

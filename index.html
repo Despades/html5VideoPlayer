@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="style.css">
+    <title>html5-player</title>
+    </head>
+    <body>
+        <div id='wrapper' class="wrapper"></div>
+        <script src='./viedeoPlayerFull.js'></script>
+        <script>
+            //инициализация плеера на странице
+            videoPlayer.init({
+                container: 'wrapper',//id контейнера для вставки плеера
+                poster: './video/preview.jpg',//путь к изображению-превью
+                source:[//массив содержащий пути к видео с разным разрешением
+                    {
+                        src: './video/OlyaLykoya360.mp4',
+                        res: 360
+                    },
+                    {
+                        src: './video/OlyaLykoya1080.mp4',
+                        res: 1080
+                    },
+                    {
+                        src: './video/OlyaLykoya720.mp4',
+                        res: 720
+                    }
+                ]
+            });
+        </script>
+    </body>
+</html>
