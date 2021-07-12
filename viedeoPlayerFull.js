@@ -12,7 +12,8 @@
 */
 
 const videoPlayer = (function(){
-
+    
+    //функция которая первоначально рендерит плеер 
     function renderTemplate(objSources){
         //пути к первому видео и постеру
         let poster = objSources.poster;
@@ -57,7 +58,7 @@ const videoPlayer = (function(){
                                             <option value='200'>x2.00</option>
                                         </select>
                                         <select title='разрешение' class='video-hud__element video-hud__resolution' id='video-hud__resolution'></select>
-                                        <a class='video-hud__element video-hud__download' title='Скачать' href='./video/video.mp4' download></a>
+                                        <a class='video-hud__element video-hud__download' title='Скачать' href=${videoSource} download></a>
                                         <div class='video-hud__element video-hud__mute video-hud__fullscreen' id='video-hud__fullscreen'>&#91;  &#93;</div>
                                     </div>
                                 </div>`;
@@ -68,12 +69,9 @@ const videoPlayer = (function(){
         document.getElementById('video-hud__resolution').appendChild(renderItem(objSources.source));//добавление выбора разрешения видео
     }
 
-
+//класс видеоплеера, содержащий основной функционал 
     class VideoPlayer{
-        constructor(){//source
-          //this.container = document.getElementById(container);
-          //this.template = template;
-          //this.sourse = source;
+        constructor(){
           this.inteface = {
               buttons: {},
               timeElements: {}
@@ -243,7 +241,8 @@ const videoPlayer = (function(){
         }
       
     }
-
+    
+    //объект конфигурации, ччерез который мы задаем контейнер плеера, пути к видеофайлам и картинке-превью
     const configuration = {
         init(obj){
             renderTemplate(obj)//рендер всего шаблона
@@ -251,7 +250,6 @@ const videoPlayer = (function(){
             player.init();
         }
     }
-    //console.log(renderTemplate([360, 480, 720, 1080]));
 
     return configuration;
 }());
