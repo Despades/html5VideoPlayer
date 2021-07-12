@@ -115,10 +115,7 @@ const videoPlayer = (function(){
 
         //Отображаем время воспроизведения
         videoProgress(e){
-            //const fn = this;
-            //if(e.target == this.inteface.buttons.resulutionSelect) return;
             //console.log(e.target);
-            //console.log(this.videoPlayer.duration);
             const progress = (Math.floor(this.videoPlayer.currentTime) / ((Math.floor(this.videoPlayer.duration) || this.lastProgress) / 100));
             this.lastProgress = progress;
             this.inteface.timeElements.progressBar.value = progress;
